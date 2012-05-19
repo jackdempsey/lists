@@ -1,6 +1,6 @@
-module RspecMountableEngine
+module Lists
   class Engine < ::Rails::Engine
-    isolate_namespace RspecMountableEngine
+    isolate_namespace Lists
 
     # taken from http://whilefalse.net/2012/01/25/testing-rails-engines-rspec/
     # RSpec's default Rails test generators simply don't work with engines (they don't namespace stuff correctly

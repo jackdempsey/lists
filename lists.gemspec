@@ -1,17 +1,17 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "rspec_mountable_engine/version"
+require "lists/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "rspec_mountable_engine"
-  s.version     = RspecMountableEngine::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
+  s.name        = "lists"
+  s.version     = Lists::VERSION
+  s.authors     = ["Jack Dempsey"]
+  s.email       = ["jack.dempsey@gmail.com"]
   s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of RspecMountableEngine."
-  s.description = "TODO: Description of RspecMountableEngine."
+  s.summary     = "Simple engine to manage lists"
+  s.description = "Simple engine to manage lists"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 

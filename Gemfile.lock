@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rspec_mountable_engine (0.0.1)
+    lists (0.0.1)
       rails (~> 3.2.3)
 
 GEM
@@ -108,5 +108,5 @@ PLATFORMS
 DEPENDENCIES
   jquery-rails
   rspec-rails
-  rspec_mountable_engine!
+  lists!
   sqlite3

@@ -9,7 +9,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require
-require "rspec_mountable_engine"
+require "lists"
 
 module Dummy
   class Application < Rails::Application

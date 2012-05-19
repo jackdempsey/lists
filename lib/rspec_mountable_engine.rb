@@ -1,4 +1,4 @@
-require "rspec_mountable_engine/engine"
+require "lists/engine"
 
-module RspecMountableEngine
+module Lists
 end

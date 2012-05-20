@@ -1,5 +1,6 @@
 module Lists
   class List < ActiveRecord::Base
-    attr_accessible :body, :position, :subject
+    belongs_to :listable, polymorphic: true
+    attr_accessible :body, :position, :subject, :listable
   end
 end

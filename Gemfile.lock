@@ -49,6 +49,12 @@ GEM
     diff-lcs (1.1.3)
     erubis (2.7.0)
     ffi (1.0.11)
+    haml (3.1.6)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.3)
@@ -130,6 +136,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  haml-rails
   jquery-rails
   lists!
   rspec-rails

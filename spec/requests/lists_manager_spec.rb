@@ -17,6 +17,10 @@ feature "Admin uses list manager", %q{
   scenario "admin creates a new list" do
     visit '/lists'
     click_link 'New List'
-    page.should have_content 'Create New List'
+    fill_in 'list_subject', with: "test list"
+    fill_in 'list_body', with: "this is an example list object's body"
+    click_button 'Create List'
+    page.should have_content 'test list'
+    page.should have_content "this is an example list object's body"
   end
 end

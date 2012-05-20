@@ -16,7 +16,7 @@ feature "Admin uses list manager", %q{
 
   scenario "admin creates a new list" do
     visit '/lists'
-    click_link 'new_list'
-    #page.should have_content 'Welcome to the Lists Manager'
+    click_link 'New List'
+    page.should have_content 'Create New List'
   end
 end

@@ -4,6 +4,7 @@ module Lists
 
     def new
       @list = List.new
+      @list.list_items.build
     end
 
     def create

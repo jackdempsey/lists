@@ -11,5 +11,16 @@
     %br
     = f.text_area :body
 
+  %div
+    = f.fields_for :list_items do |list_item_form|
+      %div
+        = list_item_form.label :subject
+        %br
+        = list_item_form.text_area :subject
+      %div
+        = list_item_form.label :body
+        %br
+        = list_item_form.text_area :body
+
   .actions
     = f.submit

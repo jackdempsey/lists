@@ -10,8 +10,9 @@ feature "Admin uses list manager", %q{
   end
 
   scenario "admin views current lists" do
+    Lists::List.create(subject: "example list")
     visit '/lists'
-    page.should have_content 'Welcome to the Lists Manager'
+    page.should have_content 'example list'
   end
 
   scenario "admin creates a new list" do

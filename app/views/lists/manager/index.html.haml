@@ -1,5 +1,8 @@
 .header
   Welcome to the Lists Manager
 
+- @lists.each do |list|
+  %p
+    = list.subject
 .actions
   = link_to 'New List', new_list_path

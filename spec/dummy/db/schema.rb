@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20120521020143) do
     t.string   "subject"
     t.text     "body"
     t.integer  "position"
+    t.integer  "list_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

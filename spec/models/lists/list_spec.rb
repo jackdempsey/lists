@@ -10,5 +10,13 @@ describe Lists::List do
       list.save
       list.listable.should eq(owning_list)
     end
+
+    it "has many items" do
+      list = Lists::List.new
+      list.list_items.new(subject: "foo", body: 'bar')
+      list.save
+      list.list_items.first.subject.should eq 'foo'
+      list.list_items.first.body.should eq 'bar'
+    end
   end
 end

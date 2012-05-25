@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Lists::VERSION
   s.authors     = ["Jack Dempsey"]
   s.email       = ["jack.dempsey@gmail.com"]
-  s.homepage    = "TODO"
+  s.homepage    = "https://github.com/jackdempsey/lists-engine"
   s.summary     = "Simple engine to manage lists"
   s.description = "Simple engine to manage lists"
 

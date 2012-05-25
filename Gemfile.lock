@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     lists (0.0.1)
+      haml-rails
       rails (~> 3.2.3)
 
 GEM
@@ -136,7 +137,6 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  haml-rails
   jquery-rails
   lists!
   rspec-rails

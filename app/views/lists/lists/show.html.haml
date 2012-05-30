@@ -1,5 +1,6 @@
 %h1 List Show
 
+= link_to 'edit', edit_list_path(@list)
 %p
   Subject:
   = @list.subject
@@ -11,7 +12,9 @@
 %p
   Items:
   - if @list.list_items.present?
-    - @list.list_items.each do |list_item|
-      = list_item.subject
-      %br
-      = list_item.body
+    %ul
+      - @list.list_items.each do |list_item|
+        %li
+          = list_item.subject
+          %br
+          = list_item.body

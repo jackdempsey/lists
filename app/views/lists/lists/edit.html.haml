@@ -1,6 +1,8 @@
-%h1 Create New List
+%h1 Edit List
 
 = form_for @list do |f|
+  .actions
+    = f.submit
   = render 'form', f: f
   .actions
     = f.submit

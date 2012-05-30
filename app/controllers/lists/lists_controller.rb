@@ -17,5 +17,17 @@ module Lists
       @list = List.find(params[:id])
       respond_with @list
     end
+
+    def edit
+      @list = List.find(params[:id])
+      @list.list_items.build
+      respond_with @list
+    end
+
+    def update
+      @list = List.find(params[:id])
+      @list.update_attributes(params[:list])
+      respond_with @list
+    end
   end
 end

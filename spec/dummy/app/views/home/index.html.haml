@@ -5,3 +5,31 @@
   %ul
     %li
       = link_to 'View Lists', lists_path
+
+%h3
+  Tips and Tricks
+
+
+%h4
+  Routes
+
+%ul
+  %li
+    When in the main app (where we are right now) if you want to use a model in a form and point to a route in a mounted engine,
+    just use the engine helper (in this case, the 
+    %code lists
+    ) object, in the form where you'd normally just put the instance variable:
+    %code
+      %p
+        :preserve
+          = form_for [lists, Lists::List.new] do |f|
+    instead of
+    %code
+      %p
+        :preserve
+          = form_for Lists::List.new do |f|
+
+    %p
+      This will help set the routes correctly so you're not left with a
+      %code method list_path not found
+      error.

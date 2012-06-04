@@ -1,3 +1,6 @@
 = Lists
 
-This project rocks and uses MIT-LICENSE.
+= Install
+
+    rake lists:install:migrations
+    rake db:migrate

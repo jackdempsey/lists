@@ -1,6 +1,6 @@
 module Lists
   class ListsController < ActionController::Base
-    respond_to :html, :json
+    respond_to :html, :json, :js
 
     def new
       @list = List.new

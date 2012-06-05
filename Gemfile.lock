@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lists (0.0.1)
+    lists (0.0.2)
       acts_as_list
       haml-rails
       rails (~> 3.2.3)

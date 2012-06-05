@@ -2,9 +2,12 @@
   //this is not good practice, but it'll be easier to see what's going on by keeping this JS inline
   $(function() {
     $(document).on('ajax:success', 'form.new_list', function(event,object,status) {
-      //console.dir(object);
-      //console.dir(object.subject);
       $("#current_lists").append($("<li>" + object.subject + "</li>"));
+      $('form.new_list')[0].reset()
+    });
+
+    $(document).on('ajax:success', '.delete-list', function(a,b,c) {
+      $(this).closest('li').remove();
     });
   });
 
@@ -14,7 +17,12 @@
   %ul#current_lists
     - current_lists.each do |list|
       %li
-        = list
+        %strong
+          = list
+        |
+        = list.list_items.join(', ')
+        |
+        = link_to 'delete', [lists, list], method: :delete, remote: true, class: 'delete-list', data: {type: :json}
 
 - list = Lists::List.new
 - 3.times { list.list_items.build }

@@ -29,5 +29,11 @@ module Lists
       @list.update_attributes(params[:list])
       respond_with @list
     end
+
+    def destroy
+      @list = List.find(params[:id])
+      @list.destroy
+      respond_with @list
+    end
   end
 end

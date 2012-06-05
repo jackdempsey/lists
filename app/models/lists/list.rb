@@ -1,6 +1,6 @@
 module Lists
   class List < ActiveRecord::Base
-    has_many :list_items
+    has_many :list_items, order: :position
     belongs_to :listable, polymorphic: true
 
     attr_accessible :body, :position, :subject, :listable, :listable_type, :listable_id, :list_items_attributes

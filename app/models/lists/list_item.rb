@@ -1,6 +1,6 @@
 module Lists
   class ListItem < ActiveRecord::Base
-    belongs_to :list
+    belongs_to :list, inverse_of: :list_items
 
     attr_accessible :body, :position, :subject
 

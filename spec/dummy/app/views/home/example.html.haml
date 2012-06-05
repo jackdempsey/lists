@@ -1,0 +1,29 @@
+%h1 Example Forms
+
+- if (current_lists = Lists::List.all).present?
+  %ul
+    - current_lists.each do |list|
+      %li
+        = list
+
+- list = Lists::List.new
+- 3.times { list.list_items.build }
+
+= form_for [lists, list], format: :json, remote: true do |f|
+  .subject
+    = f.label :subject
+    = f.text_field :subject
+
+  .body
+    = f.label :body
+    = f.text_field :body
+
+  .items
+    %h3 Items
+    %ul
+      = f.fields_for :list_items do |list_item_form|
+        %li
+          = list_item_form.text_field :subject
+  = f.submit
+
+

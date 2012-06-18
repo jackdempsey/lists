@@ -1,5 +1,5 @@
 module Lists
-  class ManagerController < ActionController::Base
+  class ManagerController < ApplicationController
     def index
       @lists = List.all
     end

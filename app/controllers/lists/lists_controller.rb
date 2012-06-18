@@ -1,5 +1,5 @@
 module Lists
-  class ListsController < ActionController::Base
+  class ListsController < ApplicationController
     respond_to :html, :json, :js
 
     def new

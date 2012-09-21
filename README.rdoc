@@ -4,3 +4,7 @@
 
     rake lists:install:migrations
     rake db:migrate
+
+    Add:
+      mount Lists::Engine => "/lists"
+    to config/routes.rb
